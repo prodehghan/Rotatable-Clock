@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SepidarSideBar", "SepidarSideBar\SepidarSideBar.csproj", "{F8FA1B53-6122-4940-8332-8F2FD53782EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SepidarSidebar", "SepidarSidebar\SepidarSidebar.csproj", "{F8FA1B53-6122-4940-8332-8F2FD53782EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

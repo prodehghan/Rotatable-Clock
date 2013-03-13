@@ -7,8 +7,8 @@
     <ProjectGuid>{F8FA1B53-6122-4940-8332-8F2FD53782EB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SG.SepidarSideBar</RootNamespace>
-    <AssemblyName>SepidarSideBar</AssemblyName>
+    <RootNamespace>SG.SepidarSidebar</RootNamespace>
+    <AssemblyName>SepidarSidebar</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
