@@ -24,5 +24,13 @@ namespace SG.SepidarSidebar
         {
             InitializeComponent();
         }
+
+        protected override void OnMouseDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseDown(e);
+
+            if (e.LeftButton == MouseButtonState.Pressed && e.RightButton == MouseButtonState.Released)
+                this.DragMove();
+        }
     }
 }

@@ -4,25 +4,35 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="400">
+             d:DesignHeight="400" d:DesignWidth="400" Width="400" Height="400">
     <Grid>
-        <Path Fill="#FFB8DC14">
+        <Path>
+            <Path.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#DD83A80B" Offset="0" />
+                    <GradientStop Color="#EEABD815" Offset="1" />
+                </LinearGradientBrush>
+            </Path.Fill>
             <Path.Data>
                 <CombinedGeometry GeometryCombineMode="Exclude">
                     <CombinedGeometry.Geometry1>
                         <StreamGeometry>
-M 20,0 L 380,0 a 20,20 0 0 1 20,20 L 400,380 a 20,20 0 0 1 -20,20 L 20,400 a 20,20 0 0 1 -20,-20 L 0,20 a 20,20 0 0 1 20,-20
+                            <!-- Frame -->
+                            M 20,0 L 380,0 a 20,20 0 0 1 20,20 L 400,380 a 20,20 0 0 1 -20,20 L 20,400 a 20,20 0 0 1 -20,-20 L 0,20 a 20,20 0 0 1 20,-20
                         </StreamGeometry>
                     </CombinedGeometry.Geometry1>
                     <CombinedGeometry.Geometry2>
                         <GeometryGroup>
                             <StreamGeometry>
+                                <!-- 1 -->
                                 M 200,0 l 0,150 a 8,8 0 0 0 8,8 l 30,0 a 8,8 0 0 0 8,-8 l 0,-150
                             </StreamGeometry>
                             <StreamGeometry>
+                                <!-- 1 -->
                                 M 280,0 l 0,150 a 8,8 0 0 0 8,8 l 30,0 a 8,8 0 0 0 8,-8 l 0,-150
                             </StreamGeometry>
                             <StreamGeometry>
+                                <!-- E (reverse 3) -->
                                 M 0,130 m 0,8
                                 a 5,5 0 0 1 5,-5 l 95,0 a 8,8 0 0 1 8,8 l 0,25 a 8,8 0 0 1 -8,8 l -70,0 a 8,8 0 0 0 -8,8
                                 a 8,8 0 0 0 8,8 l 60,0 a 8,8 0 0 1 8,8 l 0,20 a 8,8 0 0 1 -8,8 l -60,0 a 8,8 0 0 0 -8,8
@@ -33,5 +43,46 @@ M 20,0 L 380,0 a 20,20 0 0 1 20,20 L 400,380 a 20,20 0 0 1 -20,20 L 20,400 a 20,
                 </CombinedGeometry>
             </Path.Data>
         </Path>
+        <ContentControl>
+            <ContentControl.Effect>
+                <DropShadowEffect RenderingBias="Quality" ShadowDepth="2" />
+            </ContentControl.Effect>
+            <Path Fill="White" Name="hourHandle">
+                <Path.Data>
+                    M 200,200
+                    m 0,20 l 10,-20 l -10,-90 l -10,90 z
+                </Path.Data>
+                <Path.RenderTransform>
+                    <RotateTransform CenterX="200" CenterY="200" Angle="{Binding Path=HourDegree}"/>
+                </Path.RenderTransform>
+            </Path>
+        </ContentControl>
+        <ContentControl>
+            <ContentControl.Effect>
+                <DropShadowEffect RenderingBias="Quality" ShadowDepth="2" />
+            </ContentControl.Effect>
+            <Path Fill="White" Name="minuteHandle" Margin="0,1,0,-1">
+                <Path.RenderTransform>
+                    <RotateTransform CenterX="200" CenterY="200" Angle="{Binding Path=MinuteDegree}" />
+                </Path.RenderTransform>
+                <Path.Data>
+                    M 200,200
+                    m 0,40 l 5,-40 l -5,-170 l -5,170 z
+                </Path.Data>
+            </Path>
+        </ContentControl>
+        <ContentControl>
+            <ContentControl.Effect>
+                <DropShadowEffect RenderingBias="Quality" ShadowDepth="2" />
+            </ContentControl.Effect>
+            <Path Fill="Red" Name="secondHandle">
+                <Path.RenderTransform>
+                    <RotateTransform CenterX="200" CenterY="200" Angle="{Binding Path=SecondDegree}" />
+                </Path.RenderTransform>
+                <Path.Data>
+                    <RectangleGeometry RadiusX="2" RadiusY="2" Rect="199,40,3,210"/>
+                </Path.Data>
+            </Path>
+        </ContentControl>
     </Grid>
 </UserControl>
