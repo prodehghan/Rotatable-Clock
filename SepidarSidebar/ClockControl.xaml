@@ -67,7 +67,7 @@
                 </Path.RenderTransform>
                 <Path.Data>
                     M 200,200
-                    m 0,40 l 5,-40 l -5,-170 l -5,170 z
+                    m 0,40 l 10,-40 l -10,-183 l -10,183 z
                 </Path.Data>
             </Path>
         </ContentControl>
