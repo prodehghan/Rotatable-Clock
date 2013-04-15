@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="ViewModelBase.cs" />
     <Page Include="ClockControl.xaml">
       <SubType>Designer</SubType>

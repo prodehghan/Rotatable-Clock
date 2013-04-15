@@ -43,7 +43,12 @@
                             <Transform3DGroup>
                                 <RotateTransform3D>
                                     <RotateTransform3D.Rotation>
-                                        <AxisAngleRotation3D Axis="0,1,0" Angle="-17" />
+                                        <AxisAngleRotation3D Axis="0,1,0" Angle="{Binding Path=VerticalRotationDegree}" />
+                                    </RotateTransform3D.Rotation>
+                                </RotateTransform3D>
+                                <RotateTransform3D>
+                                    <RotateTransform3D.Rotation>
+                                        <AxisAngleRotation3D Axis="1,0,0" Angle="{Binding Path=HorizontalRotationDegree}" />
                                     </RotateTransform3D.Rotation>
                                 </RotateTransform3D>
                             </Transform3DGroup>
